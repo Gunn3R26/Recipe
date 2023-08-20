@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/forgot.css">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+  <title>Password Reset</title>
+</head>
+<body>
+
+  <div class="container" id="container">
+    <div class="form-container sign-in-container">
+        <form action="#">
+            <h1>Forgot Password</h1><br>
+            <span>Enter your email</span>
+            <br>
+                <input type="email" id="forgot-email" name="email" placeholder="Enter your email" required>
+                <br>
+            
+            <button type="submit" id="forgot-btn">Submit</button>
+        </form>
+    </div>
+    <div class="overlay-container">
+        <div class="overlay">
+            
+            <div class="overlay-panel overlay-right">
+                <h1>Hello, <span class="type"></span>|</h1>
+                <p>Enter the email you used to login so that further steps to secure your account can be accessed</p>
+            </div>
+        </div>
+    </div>
+</div>
+  <script src="js/forgot.js" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+</body>
+</html>

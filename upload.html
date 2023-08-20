@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/upload.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/f3a6af3bde.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>               
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="assets/receipe.png" alt=""></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit" class="search-btn">Search</button>
+        </div>
+        <ul class="navigation">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">TEAM</a></li>
+            <li><a href="review.html">REVIEWS</a></li>
+            <!-- <li><a href="login.html">SIGN UP</a></li> -->
+            <li><a href="#">NEW POST <span><i class="fa-regular fa-square-plus"></i></span></a></li>
+            <li><button id="logout-btn">LOGOUT</button></li>
+        </ul>
+      
+        <div class="hamburger">
+            <i class="fa-solid fa-bars on" id="on"></i>
+        </div>
+        <div class="alert"> 
+            <ul class="navigation1">
+                <i class='bx bxs-x-circle close'></i>
+                <li><a href="home.html" class="out">HOME</a></li>
+                <li><a href="about.html" class="out">TEAM</a></li>
+                <li><a href="review.html" class="out">REVIEWS</a></li>
+                <!-- <li><a href="login.html" class="out">SIGN UP</a></li> -->
+                <li><a href="#" class="out">NEW POST</a></li>
+                <li><button id="logout-btn" >LOGOUT</button></li>
+            </ul>
+            </i>
+        </div>
+    </header>
+    <br><br><br><br><br><br><br><br><br><br><br>
+	<div class="container">
+        <br><br><br>
+		<input type="file" id="imageInput" accept="image/*" hidden multiple>
+		<div class="img-area" data-img="">
+
+			<i class='bx bxs-cloud-upload icon'></i>
+			<h3>Upload Image</h3>
+			<p>Image size must be less than <span>2MB</span></p>
+		</div>
+        <div class="text-area" id="textArea">
+            <div class="textArea-1">
+                <input type="text" id="rec-title" placeholder="Enter the Title of your recipe">&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="text" id="rec-source" id="te" placeholder="Enter your name">
+            </div>
+            <div class="textArea-2">
+                <input type="text" id="rec-timing" placeholder="Enter the timing">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="rec-serving"  placeholder="Enter the number of servings">
+            </div>
+            
+            <textarea name="" id="rec-instructions" cols="30" rows="10" placeholder="Enter your instructions"></textarea>
+            <textarea name="" id="rec-summary" cols="30" rows="10" placeholder="Enter Your Caption"></textarea>
+        </div><br>
+        <div class="upload-btn">
+		<button class="select-image" id="select-image">Select Image</button>&nbsp;&nbsp;&nbsp;&nbsp;
+        <button class="upload-image " id="uploadBtn" >Upload</button>
+    </div>
+    </div>
+	</div>
+    
+    <script src="js/upload.js" type="module"></script>
+    <script src="js/logout.js" type="module"></script>
+</body>
+</html>

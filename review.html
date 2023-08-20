@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+	<title>Form Reviews</title>
+    <link rel="stylesheet" href="css/review.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/f3a6af3bde.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>                             
+
+</head>
+<body>
+    <header>
+        <div class="logo"><img src="assets/receipe.png" alt=""></div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit" class="search-btn">Search</button>
+        </div>
+        <ul class="navigation">
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about.html">TEAM</a></li>
+            <li><a href="#">REVIEWS</a></li>
+            <!-- <li><a href="login.html">SIGN UP</a></li> -->
+            <li><a href="upload.html">NEW POST <span><i class="fa-regular fa-square-plus"></i></span></a></li>
+            <li><button id="logout-btn">LOGOUT</button></li>
+        </ul>
+      
+        <div class="hamburger">
+            <i class="fa-solid fa-bars on" id="on"></i>
+        </div>
+        <div class="alert">
+            <ul class="navigation1">
+                <i class='bx bxs-x-circle close'></i>
+                <li><a href="home.html" class="out">HOME</a></li>
+                <li><a href="about.html" class="out">TEAM</a></li>
+                <li><a href="#" class="out">REVIEWS</a></li>
+                <!-- <li><a href="login.html" class="out">SIGN UP</a></li> -->
+                <li><a href="upload.html" class="out">NEW POST</a></li>
+                <li><button id="logout-btn" >LOGOUT</button></li>
+            </ul>
+            </i>
+        </div>
+    </header>
+	<div class="wrapper">
+		<h3>Leave your reviews here</h3>
+		<form action="https://formspree.io/f/xeqbgekk"
+        method="POST">
+			<div class="rating">
+				<input type="number" name="rating" hidden>
+				<i class='bx bx-star star' style="--i: 0;"></i>
+				<i class='bx bx-star star' style="--i: 1;"></i>
+				<i class='bx bx-star star' style="--i: 2;"></i>
+				<i class='bx bx-star star' style="--i: 3;"></i>
+				<i class='bx bx-star star' style="--i: 4;"></i>
+			</div>
+			<textarea name="opinion" cols="30" rows="5" placeholder="Your opinion..."></textarea>
+			<div class="btn-group">
+				<button type="submit" class="btn submit">Submit</button>
+				<button class="btn cancel">Cancel</button>
+			</div>
+
+		</form>
+	</div>
+    <script src="js/review.js" type="module"></script>
+    <script src="js/logout.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+  
+</body>
+</html>
