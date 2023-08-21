@@ -1,5 +1,5 @@
 # Recipe Website Readme
-`DEMO:-https://gunn3r26.github.io/Recipe/`
+DEMO:-https://gunn3r26.github.io/Recipe/ <br>
 Welcome to the Recipe Website! This readme provides an overview of the features and functionalities of the website, as well as instructions for developers on how to set up and deploy the project.
 
 ## Table of Contents
@@ -217,6 +217,10 @@ Example API Response:
 //other recipes
 
 ```
+### Collaborator
+[Abhinav Ashish](https://github.com/Abhinav7903)<br>
+[Debanik Saha](https://github.com/Gunn3R26) <br>
+[Priyanka Kundu](https://github.com/ITZPriyanka)
 
 
 
