@@ -28,11 +28,10 @@ const apiKey="76c5b0f29efc46e6ab151d85fe1ad061"
 const searchButton = document.querySelector('button[type="submit"]');
 const searchInput = document.querySelector('input[type="text"]');
 const recipeContainer = document.getElementById('recipeContainer');
-
-
-
+const databaseRecipeList = document.getElementById('databaseRecipeList'); // New container for database search results
 
 searchButton.addEventListener('click', () => {
+    document.getElementById('container-Uprecipe').style.display = 'none';
 
   const searchTerm = searchInput.value;
   if (searchTerm.trim() !== '') {
@@ -40,6 +39,7 @@ searchButton.addEventListener('click', () => {
           .then(response => response.json())
           .then(data => {
               displayRecipes(data.results);
+              searchDatabase(searchTerm);  // Search the database for the search term
           })
           .catch(error => {
               console.error('Error fetching data:', error);
@@ -48,7 +48,7 @@ searchButton.addEventListener('click', () => {
 });
 
 
-
+// Api recipe
 function displayRecipes(recipes) {
     recipeContainer.innerHTML = ''; // Clear previous results
 
@@ -88,7 +88,7 @@ function displayRecipes(recipes) {
 
 
 
-
+//Database Recipe
 document.addEventListener('DOMContentLoaded', () => {
     const recipeList = document.getElementById('recipeList');
 
@@ -104,7 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p>Source: ${recipe.source}</p>
                     <p>Timing: ${recipe.timing}</p>
                     <p>Servings: ${recipe.servings}</p>
-                    <p>Instructions: ${recipe.instructions}</p>
+                    <p>Instructions: </p>
+                    <ul class="instructions-list">${formatInstructions(recipe.instructions)}</ul>
                     <p>Summary: ${recipe.summary}</p>
                 `;
                 recipeList.appendChild(li);
@@ -114,3 +115,36 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error("Recipe list element not found.");
     }
 });
+function formatInstructions(instructions) {
+    const steps = instructions.split('. ');
+    return steps.map(step => `<li>${step}</li>`).join('');
+}
+
+// Search from database
+function searchDatabase(searchTerm) {
+    onValue(dbRef(database, "recipes"), (snapshot) => {
+        databaseRecipeList.innerHTML = ""; // Clear previous database search results
+        snapshot.forEach((childSnapshot) => {
+            const recipe = childSnapshot.val();
+            // Convert both the search term and the recipe data to lowercase for case-insensitive comparison
+            const lowerCaseSearchTerm = searchTerm.toLowerCase();
+            const lowerCaseTitle = recipe.title.toLowerCase();
+            const lowerCaseSource = recipe.source.toLowerCase();
+            
+            // Check if the lowercase recipe title or other relevant data matches the lowercase search term
+            if (lowerCaseTitle.includes(lowerCaseSearchTerm) || lowerCaseSource.includes(lowerCaseSearchTerm)) {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <h2>${recipe.title}</h2>
+                    <img src="${recipe.imageURL}" alt="Recipe Image" width="200">
+                    <p>Source: ${recipe.source}</p>
+                    <p>Timing: ${recipe.timing}</p>
+                    <p>Servings: ${recipe.servings}</p>
+                    <p>Instructions: ${recipe.instructions}</p>
+                    <p>Summary: ${recipe.summary}</p>
+                `;
+                databaseRecipeList.appendChild(li);
+            }
+        });
+    });
+}

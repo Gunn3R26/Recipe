@@ -128,6 +128,40 @@ header .hamburger {
     }
 }
 
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: auto; /* Pushes the search bar to the right */
+}
+
+.search-bar input[type="text"] {
+    margin-left: 40px;
+    padding: 8px;
+    border: 1px solid #cccccc00;
+    width: 200px; /* Adjust the width as needed */
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    background-color: rgb(255, 185, 45);
+    border: 1px solid rgb(255, 185, 45);
+    color: white;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    cursor: pointer;
+}
+.search-bar button:hover{
+    background-color: black;
+    border: 1px solid rgb(255, 185, 45);
+    color: white;
+    border-top-right-radius: 45px;
+    border-bottom-right-radius: 45px;
+    cursor: pointer;
+}
+
+
+/* Recipe list css :)😂 */
+
 .recipe,#recipeList {
     border: 1px solid #ccc;
     padding: 20px;
@@ -183,36 +217,6 @@ header .hamburger {
     font-style: italic;
     
 }
-.search-bar {
-    display: flex;
-    align-items: center;
-    margin-right: auto; /* Pushes the search bar to the right */
-}
-
-.search-bar input[type="text"] {
-    margin-left: 40px;
-    padding: 8px;
-    border: 1px solid #cccccc00;
-    width: 200px; /* Adjust the width as needed */
-}
-
-.search-bar button {
-    padding: 8px 12px;
-    background-color: rgb(255, 185, 45);
-    border: 1px solid rgb(255, 185, 45);
-    color: white;
-    border-top-right-radius: 45px;
-    border-bottom-right-radius: 45px;
-    cursor: pointer;
-}
-.search-bar button:hover{
-    background-color: black;
-    border: 1px solid rgb(255, 185, 45);
-    color: white;
-    border-top-right-radius: 45px;
-    border-bottom-right-radius: 45px;
-    cursor: pointer;
-}
 
 
 /* Style for the container */
@@ -223,37 +227,30 @@ header .hamburger {
     justify-content: center;
     gap: 20px;
     padding: 20px;
+    list-style: none;
 }
 
-/* Style for each recipe card */
-.recipe-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    width: 300px;
+
+
+
+#databaseRecipeList {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     padding: 20px;
+    list-style: none;
 }
 
-/* Style for the recipe card title */
-.recipe-title {
-    font-size: 18px;
-    font-weight: bold;
+/* Style the bullet point list */
+.instructions-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.instructions-list li {
     margin-bottom: 5px;
 }
-
-/* Style for the recipe card image */
-.recipe-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-
-/* Style for recipe details */
-.recipe-details {
-    margin-top: 10px;
-    text-align: center;
-}
-
-

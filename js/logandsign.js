@@ -86,7 +86,7 @@ const googleSignInButton = document.getElementById('In-social-button');
 // Attach a click event listener to the Google Sign-In button
 googleSignInButton.addEventListener('click', () => {
   // Sign in with Google using Firebase
-  signInWithPopup(auth, googleAuthProvider)
+  signInWithRedirect(auth, googleAuthProvider)
     .then((result) => {
       // User signed in with Google successfully
       const user = result.user;
