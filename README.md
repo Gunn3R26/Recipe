@@ -49,7 +49,7 @@ The Recipe Website is a platform that allows users to search for recipes, log in
 
 ## 6. Usage
 
-1. Start the development server: `npm start`
+1. Start the development server.
 2. Open your web browser and navigate to `http://localhost:3000` to access the website.
 
 ## 7. API Documentation
