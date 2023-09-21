@@ -3,11 +3,11 @@
 // Forgot Password logic
 document.getElementById("forgot-btn").addEventListener("click", forgot);
 
-function forgot(e) {
-    alert("Get better memory");
-    e.preventDefault(); // Prevent the default link behavior
-    alert("Badam Khao Memory Badhao");
-}
+// function forgot(e) {
+//     alert("Get better memory");
+//     e.preventDefault(); // Prevent the default link behavior
+//     alert("Badam Khao Memory Badhao");
+// }
 
 let typed = new Typed(".type", {
     strings: ["Badam khao","Yaad rakho"],
@@ -24,20 +24,20 @@ let typed = new Typed(".type", {
 
 
 
-// function forgot(e) {
-//   e.preventDefault(); // Prevent the default link behavior
+function forgot(e) {
+  e.preventDefault(); // Prevent the default link behavior
 
-//   const email = document.getElementById("forgot-email").value;
-//   // Replace 'auth' with your actual authentication instance
-//   sendPasswordResetEmail(auth, email)
-//     .then(() => {
-//       // Password reset email sent!
-//       // ...
-//       alert("Password reset email sent!");
-//     })
-//     .catch((error) => {
-//       const errorCode = error.code;
-//       const errorMessage = error.message;
-//       alert(errorMessage + " (" + errorCode + ")"); // Show the error message in an alert
-//     });
-// }
+  const email = document.getElementById("forgot-email").value;
+
+  sendPasswordResetEmail(auth, email)
+    .then(() => {
+      // Password reset email sent!
+      // ...
+      alert("Password reset email sent!");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      alert(errorMessage + " (" + errorCode + ")"); // Show the error message in an alert
+    });
+}
