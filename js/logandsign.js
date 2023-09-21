@@ -36,7 +36,8 @@ let typed = new Typed(".type", {
       .then((userCredential) => {
         // Signed in
         // const user = userCredential.user;
-        alert("HO gaya bhai tu register");
+        // alert("HO gaya bhai tu register");
+          alert("Registered Successfully");
         window.location.href = "index.html"
         // ...
       })
