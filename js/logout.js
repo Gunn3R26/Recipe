@@ -11,7 +11,9 @@ logoutBtn.addEventListener("click", () => {
   signOut(auth)
     .then(() => {
       // Logout successful
-      alert("Tussi jaa rahe ho bye");
+      // alert("Tussi jaa rahe ho bye");
+      alert("Logged out");
+        
       // Redirect the user to the login page (or any other desired page)
       window.location.href = "index.html";
     })
