@@ -15,11 +15,9 @@ Welcome to the Recipe Website! This readme provides an overview of the features 
 9. License
 
 ## 1. Introduction
-
 The Recipe Website is a platform that allows users to search for recipes, log in, sign up, and even upload their own recipes. The website is built with Firebase integration for user authentication and data storage. Additionally, it provides an API that enables users to search for recipes based on various criteria.
 
 ## 2. Features
-
 - User Authentication: Users can sign up and log in using their email and password through Firebase Authentication.
 
 - Recipe Search: Users can search for recipes using keywords, ingredients, or categories.
@@ -31,29 +29,24 @@ The Recipe Website is a platform that allows users to search for recipes, log in
 - API Access: The website offers an API endpoint that allows developers to retrieve recipe information for integration with other applications.
 
 ## 3. Technologies Used
-
 - Frontend: HTML, CSS, JavaScript
 - Database: Firebase Realtime Database and Firebase Storage
 - User Authentication: Firebase Authentication
 
 ## 4. Installation
-
 1. Clone the repository: `git clone [<repository-url>](https://github.com/Gunn3R26/Recipe.git)`
 2. Navigate to the project directory: `cd recipe-website`
 3. Firebase Config of your form firebase consosle
 
 ## 5. Configuration
-
 1. Create a Firebase project and set up Firebase Authentication and Firestore.
 2. Add your Firebase configuration details to the project's configuration files.
 
 ## 6. Usage
-
 1. Start the development server.
 2. Open your web browser and navigate to `http://localhost:3000` to access the website.
 
 ## 7. API Documentation
-
 The API endpoint for recipe search is located at `/api/search`. You can send GET requests to this endpoint with various query parameters to retrieve recipe data.
 
 Example API Request:
