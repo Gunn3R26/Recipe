@@ -1,4 +1,4 @@
-// import {auth,sendPasswordResetEmail} from "./app.js";
+import {auth,sendPasswordResetEmail} from "./app.js";
 
 // Forgot Password logic
 document.getElementById("forgot-btn").addEventListener("click", forgot);
