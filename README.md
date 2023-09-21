@@ -3,7 +3,7 @@ DEMO:-https://gunn3r26.github.io/Recipe/ <br>
 Welcome to the Recipe Website! This readme provides an overview of the features and functionalities of the website, as well as instructions for developers on how to set up and deploy the project.
 
 ## Table of Contents
-
+ 
 1. Introduction
 2. Features
 3. Technologies Used
