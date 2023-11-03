@@ -14,8 +14,22 @@ const recSummary = document.getElementById("rec-summary");
 const uploadBtn = document.getElementById("uploadBtn");
 const selectImageBtn = document.getElementById("select-image");
 selectImageBtn.addEventListener("click", () => {
-    imageInput.click(); // Simulate a click on the hidden input element
+    imageInput.click();
+    // Add an event listener for when the user selects an image
+    imageInput.addEventListener("change", (e) => {
+        const selectedImage = e.target.files[0];
+        if (selectedImage) {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                // Update the src attribute of the image preview
+                document.getElementById("image-preview").src = e.target.result;
+            };
+            // Read the selected image as a data URL
+            reader.readAsDataURL(selectedImage);
+        }
+    });
 });
+
 
 
 uploadBtn.addEventListener("click", async () => {
